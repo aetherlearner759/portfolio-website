@@ -1,0 +1,20 @@
+name: "Install dependencies"
+description: "Install the dependencies to the build"
+
+input:
+  node-version:
+    description: "Version of node to use"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: "Set up Node"
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: "npm"
+
+    - name: "Install dependencies"
+      shell: bash
+      run: npm ci
