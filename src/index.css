@@ -1,8 +1,19 @@
-:root {
-	font-family: system-ui;
-	color-scheme: light dark;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+@layer global;
+/* Normalize difference in default browser styling of HTML with normalize.css */
+@import "@/../node_modules/modern-normalize/modern-normalize.css" layer(global);
+
+@layer global {
+	:root {
+		font-synthesis: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	*,
+	::before,
+	::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
 }
