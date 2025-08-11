@@ -17,3 +17,73 @@
 		padding: 0;
 	}
 }
+
+:root {
+	--text-color: light-dark(#000000, #ffffff);
+	--background-color: light-dark(#e9eaed, #121316);
+	--primary-color: light-dark(#5a1db5, #5a1db5);
+	--secondary-color: light-dark(#c5c9d3, #2c303a);
+	--accent-color: light-dark(#90afea, #15356f);
+
+	--text10-color: color-mix(in srgb, var(--text-color) 10%, transparent);
+	--text30-color: color-mix(in srgb, var(--text-color) 30%, transparent);
+	--text50-color: color-mix(in srgb, var(--text-color) 50%, transparent);
+	--text70-color: color-mix(in srgb, var(--text-color) 70%, transparent);
+	--text90-color: color-mix(in srgb, var(--text-color) 90%, transparent);
+
+	--primary10-color: color-mix(in srgb, var(--primary-color) 10%, transparent);
+	--primary30-color: color-mix(in srgb, var(--primary-color) 30%, transparent);
+	--primary50-color: color-mix(in srgb, var(--primary-color) 50%, transparent);
+	--primary70-color: color-mix(in srgb, var(--primary-color) 70%, transparent);
+	--primary90-color: color-mix(in srgb, var(--primary-color) 90%, transparent);
+
+	--secondary10-color: color-mix(
+		in srgb,
+		var(--secondary-color) 10%,
+		transparent
+	);
+	--secondary30-color: color-mix(
+		in srgb,
+		var(--secondary-color) 30%,
+		transparent
+	);
+	--secondary50-color: color-mix(
+		in srgb,
+		var(--secondary-color) 50%,
+		transparent
+	);
+	--secondary70-color: color-mix(
+		in srgb,
+		var(--secondary-color) 70%,
+		transparent
+	);
+	--secondary90-color: color-mix(
+		in srgb,
+		var(--secondary-color) 90%,
+		transparent
+	);
+
+	--accent10-color: color-mix(in srgb, var(--accent-color) 10%, transparent);
+	--accent30-color: color-mix(in srgb, var(--accent-color) 30%, transparent);
+	--accent50-color: color-mix(in srgb, var(--accent-color) 50%, transparent);
+	--accent70-color: color-mix(in srgb, var(--accent-color) 70%, transparent);
+	--accent90-color: color-mix(in srgb, var(--accent-color) 90%, transparent);
+
+	--dark-color: light-dark(black, white);
+	--dark5-color: color-mix(in srgb, var(--dark-color) 5%, transparent);
+	--dark10-color: color-mix(in srgb, var(--dark-color) 10%, transparent);
+	--dark15-color: color-mix(in srgb, var(--dark-color) 15%, transparent);
+	--dark20-color: color-mix(in srgb, var(--dark-color) 20%, transparent);
+	--dark30-color: color-mix(in srgb, var(--dark-color) 30%, transparent);
+	--dark50-color: color-mix(in srgb, var(--dark-color) 50%, transparent);
+	--dark80-color: color-mix(in srgb, var(--dark-color) 80%, transparent);
+
+	--light-color: light-dark(white, black);
+	--light5-color: color-mix(in srgb, var(--light-color) 5%, transparent);
+	--light10-color: color-mix(in srgb, var(--light-color) 10%, transparent);
+	--light15-color: color-mix(in srgb, var(--light-color) 15%, transparent);
+	--light20-color: color-mix(in srgb, var(--light-color) 20%, transparent);
+	--light30-color: color-mix(in srgb, var(--light-color) 30%, transparent);
+	--light50-color: color-mix(in srgb, var(--light-color) 50%, transparent);
+	--light80-color: color-mix(in srgb, var(--light-color) 80%, transparent);
+}
