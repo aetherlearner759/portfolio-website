@@ -87,3 +87,11 @@
 	--light50-color: color-mix(in srgb, var(--light-color) 50%, transparent);
 	--light80-color: color-mix(in srgb, var(--light-color) 80%, transparent);
 }
+
+:root {
+	color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+	color-scheme: dark;
+}
