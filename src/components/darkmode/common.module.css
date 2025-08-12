@@ -1,0 +1,11 @@
+.root {
+	--slider-background-color: rgb(230, 230, 230);
+	--slider-on-background-color: gray;
+	--slider-shadow-color: rgba(81, 81, 81, 0.1);
+	--slider-dark-shadow-color: rgba(0, 0, 0, 0.125);
+
+	--sun-icon-color: rgb(255, 255, 30);
+	--moon-icon-color: rgb(208, 208, 20);
+	--sun-background-color: rgb(128, 223, 255);
+	--moon-background-color: #121316;
+}
