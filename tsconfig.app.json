@@ -28,7 +28,10 @@
 			"@/*": ["./src/*"],
 			"@components/*": ["./src/components/*"],
 			"@assets/*": ["./src/assets/*"],
-			"@hooks/*": ["./src/hooks/*"]
+			"@hooks/*": ["./src/hooks/*"],
+
+			"@test/*": ["./src/__test__/*"],
+			"@test/mocks/*": ["./src/__test__/mocks/*"]
 		}
 	},
 	"include": ["src"]
