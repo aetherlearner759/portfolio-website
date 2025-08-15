@@ -1,3 +1,17 @@
+import { useEffect } from "react";
+import {
+	syncThemeToDOM,
+	unsyncThemeFromDOM,
+} from "./hooks/darkmode/useDarkMode";
+import PortfolioPage from "./pages/PortfolioPage";
+
 export default function App() {
-	return <>Hello World!</>;
+	useEffect(() => {
+		syncThemeToDOM();
+		return () => {
+			unsyncThemeFromDOM();
+		};
+	}, []);
+
+	return <PortfolioPage />;
 }
