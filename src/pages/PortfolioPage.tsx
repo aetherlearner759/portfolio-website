@@ -6,14 +6,22 @@ import NavigationSideBar from "@components/navbar/NavigationSideBar/NavigationSi
 import DarkModeToggle from "@components/darkmode/DarkModeToggle/DarkModeToggle";
 import SideHamburgerMenu from "@components/SideHamburgerMenu/SideHamburgerMenu";
 import TopHeader from "@components/TopHeader/TopHeader";
+import SkillSection from "@components/sections/skills/SkillSection/SkillSection";
+import ProjectSection from "@components/sections/projects/ProjectSection/ProjectSection";
+import AboutSection from "@components/sections/about/AboutSection/AboutSection";
+import EducationSection from "@components/sections/education/EducationSection/EducationSection";
+import ContactSection from "@components/sections/contact/ContactSection/ContactSection";
+import IntroSection from "@/components/sections/intro/IntroSection/IntroSection";
+import Footer from "@/components/Footer/Footer";
 
 export default function PortfolioPage() {
 	const isDeviceSmall = useMediaQuery("(max-width: 700px)");
 
 	const links = [
-		{ text: "About Me", href: "#hero", active: true },
-		{ text: "Projects & Exp", href: "#projects" },
+		{ text: "Home", href: "#intro", active: true },
+		{ text: "About", href: "#about" },
 		{ text: "Skills", href: "#skills" },
+		{ text: "Projects & Exp", href: "#projects" },
 		{ text: "Education", href: "#education" },
 		{ text: "Contact Me", href: "#contact" },
 	];
@@ -39,11 +47,48 @@ export default function PortfolioPage() {
 				</TopHeader>
 			)}
 
-			<div id="hero"></div>
-			<div id="projects"></div>
-			<div id="skills"></div>
-			<div id="education"></div>
-			<div id="contact"></div>
+			<main>
+				<section
+					id="intro"
+					className={`${style.section} ${style["home-section"]}`}
+				>
+					<IntroSection />
+				</section>
+				<section
+					id="about"
+					className={`${style.section} ${style["about-section"]}`}
+				>
+					<AboutSection />
+				</section>
+				<section
+					id="skills"
+					className={`${style.section} ${style["skills-section"]}`}
+				>
+					<SkillSection />
+				</section>
+				<section
+					id="projects"
+					className={`${style.section} ${style["projects-section"]}`}
+				>
+					<ProjectSection />
+				</section>
+				<section
+					id="education"
+					className={`${style.section} ${style["education-section"]}`}
+				>
+					<EducationSection />
+				</section>
+				<section
+					id="contact"
+					className={`${style.section} ${style["contact-section"]}`}
+				>
+					<ContactSection />
+				</section>
+			</main>
+
+			<footer className={style.footer}>
+				<Footer />
+			</footer>
 		</div>
 	);
 }
