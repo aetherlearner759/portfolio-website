@@ -1,0 +1,11 @@
+.container {
+	display: grid;
+
+	width: 100%;
+	max-width: min(85%, 691px);
+	grid-template-columns: repeat(auto-fill, 150px);
+	justify-content: center;
+	column-gap: 13px;
+	row-gap: 13px;
+	list-style: none;
+}
