@@ -1,6 +1,6 @@
 import type { Skill, SkillID } from "./skills.type";
 import { skills } from "./skill.data";
-import { deepFreeze } from "@/utility";
+import { deepFreeze } from "@/utility/javascript-utility";
 
 export type FeatureKey = "NET Developer" | "C# Developer";
 

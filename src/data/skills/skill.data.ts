@@ -1,4 +1,4 @@
-import { deepFreeze } from "@/utility";
+import { deepFreeze } from "@/utility/javascript-utility";
 import { type Skill } from "./skills.type";
 
 const skillsDataBuilder = function () {
