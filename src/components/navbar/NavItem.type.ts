@@ -1,5 +1,5 @@
 export interface NavItem {
 	text: string;
 	href: string;
-	active?: boolean;
+	domRef: React.RefObject<HTMLElement | null>;
 }
