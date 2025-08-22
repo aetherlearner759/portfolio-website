@@ -13,18 +13,27 @@ import EducationSection from "@components/sections/education/EducationSection/Ed
 import ContactSection from "@components/sections/contact/ContactSection/ContactSection";
 import IntroSection from "@/components/sections/intro/IntroSection/IntroSection";
 import Footer from "@/components/Footer/Footer";
+import type { NavItem } from "@/components/navbar/NavItem.type";
+import { useRef } from "react";
 
 export default function PortfolioPage() {
 	const isDeviceSmall = useMediaQuery("(max-width: 700px)");
+	const homeSectionRef = useRef<HTMLElement | null>(null);
+	const aboutSectionRef = useRef<HTMLElement | null>(null);
+	const skillsSectionRef = useRef<HTMLElement | null>(null);
+	const projectsSectionRef = useRef<HTMLElement | null>(null);
+	const educationSectionRef = useRef<HTMLElement | null>(null);
+	const contactSectionRef = useRef<HTMLElement | null>(null);
 
-	const links = [
-		{ text: "Home", href: "#intro", active: true },
-		{ text: "About", href: "#about" },
-		{ text: "Skills", href: "#skills" },
-		{ text: "Projects & Exp", href: "#projects" },
-		{ text: "Education", href: "#education" },
-		{ text: "Contact Me", href: "#contact" },
+	const links: NavItem[] = [
+		{ text: "Home", href: "#intro", domRef: homeSectionRef },
+		{ text: "About", href: "#about", domRef: aboutSectionRef },
+		{ text: "Skills", href: "#skills", domRef: skillsSectionRef },
+		{ text: "Projects & Exp", href: "#projects", domRef: projectsSectionRef },
+		{ text: "Education", href: "#education", domRef: educationSectionRef },
+		{ text: "Contact Me", href: "#contact", domRef: contactSectionRef },
 	];
+
 	return (
 		<div className={style.page}>
 			{isDeviceSmall ? (
@@ -51,36 +60,42 @@ export default function PortfolioPage() {
 				<section
 					id="intro"
 					className={`${style.section} ${style["home-section"]}`}
+					ref={homeSectionRef}
 				>
 					<IntroSection />
 				</section>
 				<section
 					id="about"
 					className={`${style.section} ${style["about-section"]}`}
+					ref={aboutSectionRef}
 				>
 					<AboutSection />
 				</section>
 				<section
 					id="skills"
 					className={`${style.section} ${style["skills-section"]}`}
+					ref={skillsSectionRef}
 				>
 					<SkillSection />
 				</section>
 				<section
 					id="projects"
 					className={`${style.section} ${style["projects-section"]}`}
+					ref={projectsSectionRef}
 				>
 					<ProjectSection />
 				</section>
 				<section
 					id="education"
 					className={`${style.section} ${style["education-section"]}`}
+					ref={educationSectionRef}
 				>
 					<EducationSection />
 				</section>
 				<section
 					id="contact"
 					className={`${style.section} ${style["contact-section"]}`}
+					ref={contactSectionRef}
 				>
 					<ContactSection />
 				</section>
