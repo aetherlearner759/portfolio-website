@@ -1,0 +1,25 @@
+.container {
+	width: 100%;
+
+	padding: 30px 40px 20px 40px;
+
+	border-top: 1px solid var(--dark10-color);
+	box-shadow: 0px -1px 5px 0px var(--dark10-color);
+	display: flex;
+	align-items: center;
+
+	font-size: 0.9rem;
+	color: var(--text70-color);
+}
+
+.to-top-button {
+	margin-left: auto;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: inherit;
+
+	&:hover {
+		color: var(--text-color);
+	}
+}
