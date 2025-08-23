@@ -2,6 +2,15 @@
 /* Normalize difference in default browser styling of HTML with normalize.css */
 @import "@/../node_modules/modern-normalize/modern-normalize.css" layer(global);
 
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("@assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf")
+		format("truetype");
+	font-weight: 300, 400, 500, 600, 700;
+	font-style: normal;
+	font-display: swap;
+}
+
 @layer global {
 	:root {
 		font-synthesis: none;
@@ -19,6 +28,9 @@
 }
 
 :root {
+	--font-standard: "Space Grotesk", Arial, sans-serif;
+	--font-emphasis: "Space Grotesk", "Helvetica", Arial, sans-serif;
+
 	--color-text: rgb(var(--string-textColor));
 	--color-background: rgb(var(--string-backgroundColor));
 	--color-backgroundContrast: rgb(var(--string-backgroundContrastColor));
