@@ -1,0 +1,21 @@
+.link-reset {
+	& a {
+		text-decoration: none;
+	}
+	& a:link,
+	& a:visited,
+	& a:hover,
+	& a:active {
+		color: unset;
+	}
+}
+
+.root {
+	--color-link-inactive: var(--color-text-a30);
+	--color-link-hover: var(--color-text-a70);
+	--color-link-active: var(--color-text);
+
+	--transition-link: transform 0.5s;
+	--transform-link-inactive: scale(1);
+	--transform-link-hover: scale(1.07);
+}

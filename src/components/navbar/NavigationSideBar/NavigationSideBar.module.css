@@ -22,7 +22,7 @@
 	list-style: none;
 	font-size: 1.85rem;
 	padding: 10px 0;
-	color: var(--color-text-a30);
+	color: var(--color-link-inactive);
 
 	display: flex;
 	justify-content: center;
@@ -32,33 +32,44 @@
 		display: block;
 		text-align: center;
 		padding: 0.5em 1em;
+
+		transition: var(--transition-link);
+		transform: var(--transform-link-inactive);
 	}
 
-	&::after {
-		content: " ";
-		opacity: 0;
-		position: absolute;
-		height: 75%;
-		right: 0px;
-		border-top: 3px solid transparent;
-		border-bottom: 3px solid transparent;
-		border-right: 6px solid var(--color-accent);
-		transform: translateX(10px);
-		transition:
-			opacity 0.8s,
-			transform 0.5s;
-	}
-
-	&:not(.active):hover {
-		color: var(--color-text-a70);
+	&:not(.active) a:hover {
+		color: var(--color-link-hover);
+		transform: var(--transform-link-hover);
 	}
 
 	&.active {
-		color: var(--color-text);
+		color: var(--color-link-active);
 	}
 
-	&.active::after {
+	& a::after {
+		content: " ";
+		position: absolute;
+		display: block;
+		height: 3px;
+		width: 100%;
+		bottom: 0;
+		left: 0px;
+		background: linear-gradient(
+			90deg,
+			transparent 0%,
+			var(--color-accent) 50%,
+			transparent 100%
+		);
+		opacity: 0;
+		transform-origin: center;
+		transform: scaleX(0);
+		transition:
+			opacity 0.5s ease-out,
+			transform 0.3s;
+	}
+
+	&.active a::after {
 		opacity: 1;
-		transform: translateX(0px);
+		transform: scaleX(1);
 	}
 }

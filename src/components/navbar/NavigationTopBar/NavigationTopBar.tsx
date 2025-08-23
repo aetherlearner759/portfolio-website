@@ -1,3 +1,4 @@
+import commonStyle from "../common.module.css";
 import style from "./NavigationTopBar.module.css";
 import { type NavItem } from "../NavItem.type";
 import { useState } from "react";
@@ -16,7 +17,7 @@ export default function NavigationTopBar(props: Props) {
 	}
 
 	return (
-		<nav>
+		<nav className={commonStyle.root}>
 			<NavigationTracker
 				toTrack={linkRefs}
 				onActiveIndexChanged={handleActiveIndexChanged}
@@ -25,7 +26,7 @@ export default function NavigationTopBar(props: Props) {
 					{props.links.map((link, index) => (
 						<li
 							key={link.text}
-							className={`${style.link} ${selectedIndex === index ? style.active : ""}`}
+							className={`${commonStyle["link-reset"]} ${style.link} ${selectedIndex === index ? style.active : ""}`}
 						>
 							<a href={link.href}>{link.text}</a>
 						</li>
