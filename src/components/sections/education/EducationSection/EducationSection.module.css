@@ -1,12 +1,13 @@
 .education-container {
-	background-color: var(--background-color);
+	background-color: var(--color-background);
 	padding: 16px;
 	border-radius: 5px;
-	border: 1px solid var(--dark50-color);
-	box-shadow: 0px 0px 2px var(--dark50-color);
+	border: 1px solid var(--color-backgroundContrast-a10);
+	box-shadow: 0px 0px 5px var(--color-backgroundShadow);
 	margin: auto;
 	margin-top: 50px;
 	width: fit-content;
+	color: var(--color-text);
 
 	display: grid;
 	grid-template-columns: auto 1fr;

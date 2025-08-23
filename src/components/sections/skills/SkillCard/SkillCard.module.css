@@ -3,12 +3,12 @@
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 2fr;
 	column-gap: 7px;
+	color: var(--color-text);
 
-	background-color: var(--primary90-color);
-	border: 5px solid var(--primary50-color);
-	box-shadow: 0px 0px 5px var(--dark30-color);
+	background-color: var(--color-background);
+	border: 1px solid var(--color-backgroundContrast-a10);
+	box-shadow: 0px 0px 5px 0px var(--color-backgroundShadow);
 	border-radius: 10px;
-
 	padding: 3px;
 }
 
@@ -55,7 +55,7 @@
 	}
 
 	& span.active {
-		background-color: var(--accent-color);
+		background-color: var(--color-accent);
 	}
 }
 
@@ -66,6 +66,7 @@
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+	color: var(--color-text);
 
 	& svg {
 		width: 100%;

@@ -21,7 +21,7 @@
 	list-style: none;
 	font-size: 1.15rem;
 	padding: 10px 0px;
-	color: var(--dark50-color);
+	color: var(--color-text-a30);
 
 	display: flex;
 	justify-content: center;
@@ -39,7 +39,7 @@
 		bottom: 0px;
 		border-left: 2px solid transparent;
 		border-right: 2px solid transparent;
-		border-bottom: 5px solid var(--accent-color);
+		border-bottom: 5px solid var(--color-accent);
 		transform: translateY(10px);
 		transition:
 			opacity 0.8s,
@@ -47,11 +47,11 @@
 	}
 
 	&:not(.active):hover {
-		color: var(--dark70-color);
+		color: var(--color-text-a70);
 	}
 
 	&.active {
-		color: var(--dark-color);
+		color: var(--color-text);
 	}
 
 	&.active::after {

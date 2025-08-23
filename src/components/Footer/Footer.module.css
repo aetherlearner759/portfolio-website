@@ -3,13 +3,14 @@
 
 	padding: 30px 40px 20px 40px;
 
-	border-top: 1px solid var(--dark10-color);
-	box-shadow: 0px -1px 5px 0px var(--dark10-color);
+	background-color: var(--color-background);
+	border-top: 1px solid var(--color-backgroundContrast-a10);
+	box-shadow: 0px -1px 5px 0px var(--color-backgroundShadow);
 	display: flex;
 	align-items: center;
 
 	font-size: 0.9rem;
-	color: var(--text70-color);
+	color: var(--color-text-a60);
 }
 
 .to-top-button {
@@ -20,6 +21,6 @@
 	color: inherit;
 
 	&:hover {
-		color: var(--text-color);
+		color: var(--color-text);
 	}
 }

@@ -4,13 +4,13 @@ html {
 }
 
 .page {
-	background-color: var(--background-color);
+	background-color: var(--color-background);
 	width: 100vw;
 	height: auto;
 }
 
 .top-header-content {
-	background-color: var(--background-color);
+	background-color: var(--color-background);
 	padding-right: 20px;
 	display: flex;
 	justify-content: right;
@@ -22,7 +22,7 @@ html {
 }
 
 .side-menu-content {
-	background-color: var(--background-color);
+	background-color: var(--color-background);
 	padding-top: 20px;
 
 	display: flex;

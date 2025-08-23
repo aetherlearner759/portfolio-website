@@ -22,7 +22,7 @@
 	list-style: none;
 	font-size: 1.15rem;
 	padding: 10px 0;
-	color: var(--dark50-color);
+	color: var(--color-text-a30);
 
 	display: flex;
 	justify-content: center;
@@ -42,7 +42,7 @@
 		right: 0px;
 		border-top: 3px solid transparent;
 		border-bottom: 3px solid transparent;
-		border-right: 6px solid var(--accent-color);
+		border-right: 6px solid var(--color-accent);
 		transform: translateX(10px);
 		transition:
 			opacity 0.8s,
@@ -50,11 +50,11 @@
 	}
 
 	&:not(.active):hover {
-		color: var(--dark70-color);
+		color: var(--color-text-a70);
 	}
 
 	&.active {
-		color: var(--dark-color);
+		color: var(--color-text);
 	}
 
 	&.active::after {

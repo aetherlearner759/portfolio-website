@@ -45,7 +45,7 @@
 .btn {
 	border: none;
 	background-color: transparent;
-	color: var(--text-color);
+	color: var(--color-text);
 	cursor: pointer;
 	border-radius: 5px;
 	font-size: 4rem;

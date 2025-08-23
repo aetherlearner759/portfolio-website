@@ -23,7 +23,7 @@
 		flex-shrink: 0;
 
 		& .about-text {
-			color: var(--text-color);
+			color: var(--color-text);
 			font-size: 1.1rem;
 			line-height: 1.5rem;
 		}

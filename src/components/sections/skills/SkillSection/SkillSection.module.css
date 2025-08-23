@@ -18,7 +18,7 @@
 
 .tab-btn {
 	position: relative;
-	color: var(--dark50-color);
+	color: var(--color-text-a30);
 	font-size: 1.25rem;
 	border: none;
 	cursor: pointer;
@@ -35,7 +35,7 @@
 	&::after {
 		content: " ";
 		position: absolute;
-		background-color: var(--dark-color);
+		background-color: var(--color-text);
 		bottom: 3px;
 		width: 35%;
 		height: 1px;
@@ -44,11 +44,11 @@
 	}
 
 	&:hover {
-		color: var(--dark80-color);
+		color: var(--color-text-a70);
 	}
 
 	&.active {
-		color: var(--dark-color);
+		color: var(--color-text);
 		transform: translateY(7px);
 
 		&::after {
