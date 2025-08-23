@@ -13,6 +13,7 @@
 
 @layer global {
 	:root {
+		font-size: 10px;
 		font-synthesis: none;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;

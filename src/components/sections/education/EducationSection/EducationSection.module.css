@@ -32,17 +32,17 @@
 	}
 
 	& .program {
-		font-size: 1.25rem;
+		font-size: 2rem;
 	}
 
 	& .uni {
-		font-size: 1.15rem;
+		font-size: 1.85rem;
 		margin-top: 5px;
 	}
 
 	& .description {
 		margin-top: 5px;
-		line-height: 1.4rem;
+		line-height: 2.25rem;
 		grid-column: 1 / -1;
 	}
 
@@ -53,7 +53,7 @@
 		grid-template-columns: 1fr 1fr;
 
 		& > li {
-			font-size: 0.9rem;
+			font-size: 1.45rem;
 		}
 	}
 }
