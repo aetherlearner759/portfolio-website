@@ -39,6 +39,7 @@
 	--color-white: light-dark(white, rgb(238, 238, 238));
 
 	--color-backgroundShadow: rgba(var(--string-backgroundContrastColor), 0.1);
+	--color-textShadow: rgba(var(--string-backgroundContrastColor), 0.15);
 
 	--color-text-a10: rgba(var(--string-textColor), 0.1);
 	--color-text-a20: rgba(var(--string-textColor), 0.2);

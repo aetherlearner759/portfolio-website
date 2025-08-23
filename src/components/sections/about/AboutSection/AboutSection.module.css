@@ -24,6 +24,7 @@
 
 		& .about-text {
 			color: var(--color-text);
+			text-shadow: 0px 0px 5px var(--color-textShadow);
 			font-size: 1.75rem;
 			line-height: 2.4rem;
 		}

@@ -9,7 +9,7 @@ export default function IntroSection() {
 			<p className={style.subtitle}>Aspiring Full-Stack Developer</p>
 
 			<div className={style["scroll-indicator"]}>
-				Scroll down
+				<p className={style["scroll-indicator-text"]}>Scroll down</p>
 				<FaCaretDown />
 			</div>
 		</div>

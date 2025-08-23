@@ -44,8 +44,14 @@
 	align-items: center;
 
 	& a {
-		color: var(--color-text);
+		color: var(--color-text-a80);
 		margin-left: 10px;
+		transition: transform 0.4s;
+
+		&:hover {
+			color: var(--color-text);
+			transform: scale(1.05);
+		}
 	}
 
 	& .learn-more-link {
