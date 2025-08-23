@@ -15,7 +15,7 @@ export default function SideHamburgerMenu(props: PropsWithChildren) {
 
 	return (
 		<>
-			<button className={style["icon-btn"]}>
+			<button className={style["icon-btn"]} type="button">
 				<GiHamburgerMenu
 					className={style.icon}
 					onClick={handleHamburgerClick}

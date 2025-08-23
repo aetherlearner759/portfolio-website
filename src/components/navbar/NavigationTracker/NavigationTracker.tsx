@@ -7,13 +7,14 @@ interface Props {
 
 export default function NavigationTracker(props: PropsWithChildren<Props>) {
 	const observers = useRef<IntersectionObserver[]>([]);
+	const { toTrack, onActiveIndexChanged } = props;
 
 	useEffect(() => {
 		function hookObserver(element: HTMLElement, index: number) {
 			const observer = new IntersectionObserver(
 				(entries) => {
 					if (entries[0].isIntersecting) {
-						props.onActiveIndexChanged(index);
+						onActiveIndexChanged(index);
 					}
 				},
 				{
@@ -25,11 +26,13 @@ export default function NavigationTracker(props: PropsWithChildren<Props>) {
 		}
 
 		function cleanUp() {
-			observers.current.forEach((o) => { o.disconnect(); });
+			observers.current.forEach((o) => {
+				o.disconnect();
+			});
 			observers.current = [];
 		}
 
-		props.toTrack.forEach((t, index) => {
+		toTrack.forEach((t, index) => {
 			if (t.current !== null) {
 				hookObserver(t.current, index);
 			}
@@ -38,7 +41,7 @@ export default function NavigationTracker(props: PropsWithChildren<Props>) {
 		return () => {
 			cleanUp();
 		};
-	}, [props.toTrack, props.onActiveIndexChanged]);
+	}, [toTrack, onActiveIndexChanged]);
 
 	return <>{props.children}</>;
 }
