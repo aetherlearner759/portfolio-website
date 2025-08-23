@@ -1,22 +1,12 @@
-.container {
-	background-color: transparent;
-
-	width: 100%;
-	height: 100%;
-
+.root {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	row-gap: 20px;
 
-	&:last-child {
+	& > *:last-child {
 		flex-grow: 1;
 	}
-}
-
-.section-header {
-	font-size: 2.5rem;
-	text-align: center;
 }
 
 .tabs-header {

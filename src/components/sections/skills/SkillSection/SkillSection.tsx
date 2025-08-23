@@ -1,3 +1,4 @@
+import commonStyle from "../../common.module.css";
 import style from "./SkillSection.module.css";
 import getSkills from "@data/skills/getSkillData";
 import { type Skill, type SkillCategory } from "@data/skills/skills.type";
@@ -27,8 +28,8 @@ export default function SkillSection() {
 	}, [skills, selectedCategory]);
 
 	return (
-		<div className={style.container}>
-			<h2 className={style["section-header"]}>Skills</h2>
+		<div className={`${commonStyle.root} ${style.root}`}>
+			<h2 className={commonStyle["section-header"]}>Skills</h2>
 
 			<div className={style["tabs-header"]}>
 				{(["All", "Frontend", "Backend", "Tools"] as Category[]).map((c) => {
