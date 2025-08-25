@@ -11,6 +11,13 @@ html {
 	font-size: 1.6rem;
 }
 
+.background {
+	position: fixed;
+	width: 100vw;
+	height: 100vw;
+	pointer-events: none;
+}
+
 .top-header-content {
 	background-color: transparent;
 	padding-right: 20px;

@@ -15,6 +15,7 @@ import IntroSection from "@/components/sections/intro/IntroSection/IntroSection"
 import Footer from "@/components/Footer/Footer";
 import type { NavItem } from "@/components/navbar/NavItem.type";
 import { useRef } from "react";
+import ParticleBackground from "@/components/ParticleBackground/ParticleBackground";
 
 export default function PortfolioPage() {
 	const isDeviceSmall = useMediaQuery("(max-width: 700px)");
@@ -36,6 +37,10 @@ export default function PortfolioPage() {
 
 	return (
 		<div className={style.page}>
+			<div className={style.background}>
+				<ParticleBackground />
+			</div>
+
 			{isDeviceSmall ? (
 				<SideHamburgerMenu>
 					<div className={style["side-menu-content"]}>
