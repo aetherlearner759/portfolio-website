@@ -1,80 +1,50 @@
 .container {
-	position: relative;
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
 }
 
-.project-container {
-	width: 100%;
-	overflow-x: hidden;
-	overflow-y: hidden;
+.project {
 	display: flex;
-	align-content: center;
-	padding: 30px;
-	column-gap: 50px;
+	justify-content: center;
+	margin-bottom: 100px;
+	width: 100%;
+	height: 40vh;
+	opacity: 0;
+	animation: fadeIn 0.4s forwards;
 
-	& > * {
-		flex-shrink: 0;
+	&:has(+ .buttons-row) {
+		margin-bottom: 0px;
 	}
+}
 
-	/* Provide empty space within scrolling area allowing first and last few items to be centered */
-	&::before,
-	&::after {
-		display: block;
-		content: " ";
-		width: 100%;
-		height: 1px;
-		flex-shrink: 0;
+@keyframes fadeIn {
+	100% {
+		opacity: 1;
 	}
+}
 
-	& .project {
-		opacity: 0.5;
-		transition:
-			opacity 0.4s,
-			transform 0.4s;
+.buttons-row {
+	margin-top: 75px;
+	width: min(80%, 300px);
+	display: flex;
+	justify-content: space-between;
+
+	& button {
+		font-size: 1.8rem;
+		color: var(--color-text-a70);
+		background-color: transparent;
+		border: none;
 		cursor: pointer;
+		text-shadow: 0px 0px 10px var(--color-textShadow);
+		transition: transform 0.4s;
 
 		&:hover {
+			color: var(--color-text);
 			transform: scale(1.05);
 		}
-
-		&.active {
-			cursor: unset;
-			transform: scale(1.1);
-			opacity: 1;
-		}
 	}
-}
-
-.btn {
-	border: none;
-	background-color: transparent;
-	color: var(--color-text);
-	cursor: pointer;
-	border-radius: 5px;
-	font-size: 6.5rem;
-	transition: transform 0.4s;
-
-	&.left {
-		grid-column: 2;
-	}
-
-	&.right {
-		grid-column: 4;
-	}
-
-	&:hover {
-		transform: scale(1.1);
-	}
-}
-
-.btn-container {
-	position: absolute;
-	width: 100%;
-	display: grid;
-	grid-template-columns: minmax(0px, 1fr) auto minmax(300px, 5fr) auto minmax(
-			0px,
-			1fr
-		);
 }

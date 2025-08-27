@@ -5,6 +5,7 @@ export const projects: Project[] = [
 	{
 		id: "Project1",
 		name: "My First Project",
+		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
 		shortDescription:
 			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
 		thumbnailImportPath: getImageURL(
@@ -20,6 +21,7 @@ export const projects: Project[] = [
 	{
 		id: "Project2",
 		name: "My Second Project",
+		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
 		shortDescription:
 			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
 		thumbnailImportPath: getImageURL(
@@ -35,6 +37,7 @@ export const projects: Project[] = [
 	{
 		id: "Project3",
 		name: "My Third Project",
+		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
 		shortDescription:
 			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
 		thumbnailImportPath: getImageURL(
@@ -50,6 +53,7 @@ export const projects: Project[] = [
 	{
 		id: "Project4",
 		name: "My Fourth Project",
+		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
 		shortDescription:
 			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
 		thumbnailImportPath: getImageURL(
@@ -65,6 +69,7 @@ export const projects: Project[] = [
 	{
 		id: "Project5",
 		name: "My Fifth Project",
+		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
 		shortDescription:
 			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
 		thumbnailImportPath: getImageURL(

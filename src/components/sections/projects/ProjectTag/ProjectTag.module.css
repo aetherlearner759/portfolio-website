@@ -1,0 +1,11 @@
+.tag {
+	background-color: var(--color-accent);
+	color: var(--color-white);
+	border-radius: 1.4rem;
+	padding: 0.5rem 1rem;
+	font-size: 1.3rem;
+
+	display: flex inline;
+	justify-content: center;
+	align-items: center;
+}

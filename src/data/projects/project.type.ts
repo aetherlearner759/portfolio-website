@@ -9,6 +9,7 @@ export interface Project {
 	id: ProjectID;
 	thumbnailImportPath: URL;
 	name: string;
+	tags: string[];
 	shortDescription: string;
 	githubLink: URL;
 	websiteLink?: URL;

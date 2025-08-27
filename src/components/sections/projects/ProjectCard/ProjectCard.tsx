@@ -1,24 +1,36 @@
 import style from "./ProjectCard.module.css";
 import type { Project } from "@/data/projects/project.type";
 import { FaDesktop, FaServer, FaGithub, FaYoutube } from "react-icons/fa";
+import ProjectTag from "../ProjectTag/ProjectTag";
 
 interface Props {
 	project: Project;
+	variant?: "left" | "right";
 }
 
-export default function ProjectCard(props: Props) {
-	const proj = props.project;
+export default function ProjectCard({ variant = "left", project }: Props) {
 	return (
-		<div className={style.container}>
-			<img className={style.thumbnail} src={proj.thumbnailImportPath.href} />
+		<div
+			className={`${style.container} ${variant === "left" ? style["left-variant"] : style["right-variant"]}`}
+		>
+			<img
+				className={style.thumbnail}
+				src={project.thumbnailImportPath.href}
+				alt={`${project.name} thumbnail`}
+			/>
 			<div className={style.contents}>
-				<p className={style.title}>{proj.name}</p>
-				<p className={style.description}>{proj.shortDescription}</p>
+				<h3>{project.name}</h3>
+				<div className={style.tags}>
+					{project.tags.map((t) => (
+						<ProjectTag key={t} tag={t} />
+					))}
+				</div>
+				<p>{project.shortDescription}</p>
 				<div className={style["links-row"]}>
-					{proj.learnMoreLink && (
+					{project.learnMoreLink && (
 						<a
 							className={style["learn-more-link"]}
-							href={proj.learnMoreLink.href}
+							href={project.learnMoreLink.href}
 							target="_self"
 							aria-label="Learn more about project"
 						>
@@ -26,9 +38,9 @@ export default function ProjectCard(props: Props) {
 						</a>
 					)}
 
-					{proj.websiteLink && (
+					{project.websiteLink && (
 						<a
-							href={proj.websiteLink.href}
+							href={project.websiteLink.href}
 							target="_blank"
 							aria-label="Visit website"
 							title="Visit website"
@@ -36,9 +48,9 @@ export default function ProjectCard(props: Props) {
 							<FaDesktop />
 						</a>
 					)}
-					{proj.serverLink && (
+					{project.serverLink && (
 						<a
-							href={proj.serverLink.href}
+							href={project.serverLink.href}
 							target="_blank"
 							aria-label="Visit backend server"
 							title="Visit backend server"
@@ -46,9 +58,9 @@ export default function ProjectCard(props: Props) {
 							<FaServer />
 						</a>
 					)}
-					{proj.demoVideoLink && (
+					{project.demoVideoLink && (
 						<a
-							href={proj.demoVideoLink.href}
+							href={project.demoVideoLink.href}
 							target="_blank"
 							aria-label="View demo video"
 							title="View demo video"
@@ -57,7 +69,7 @@ export default function ProjectCard(props: Props) {
 						</a>
 					)}
 					<a
-						href={proj.githubLink.href}
+						href={project.githubLink.href}
 						target="_blank"
 						aria-label="View source code"
 						title="View source code"
