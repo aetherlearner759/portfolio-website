@@ -13,6 +13,9 @@ const featureGroupBuilder = function () {
 				throw Error("Conflicting feature key");
 			}
 			result[featureKey] = skillIds.map((sid) => {
+				if (!(sid in skills)) {
+					throw Error(`Undefined skill key ${sid}`);
+				}
 				return skills[sid];
 			});
 			return this;
@@ -25,11 +28,24 @@ const featureGroupBuilder = function () {
 
 export const featuredSkillMap = featureGroupBuilder()
 	.add("NET Developer", [
-		"C#",
+		"Typescript",
+		"Javascript",
 		"HTML",
 		"CSS",
-		"Rust",
-		"JavascriptClient",
-		"JavascriptServer",
+		"Tailwind",
+		"C#",
+		"ASP.NET",
+		"SQL",
+		"Microsoft SQL Server",
+		"EF",
+		"Dapper",
+		"MongoDB",
+		"PowerShell",
+		"BASH",
+		"Git",
+		"Github",
+		"Vite",
+		"NPM",
+		"Docker",
 	])
 	.build();

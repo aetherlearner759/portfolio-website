@@ -24,7 +24,9 @@ export default function SkillSection() {
 	const skillsToDisplay: Skill[] = useMemo(() => {
 		return selectedCategory === "All"
 			? skills
-			: skills.filter((s) => s.category === selectedCategory);
+			: skills.filter(
+					(s) => s.categories.findIndex((c) => c === selectedCategory) !== -1,
+				);
 	}, [skills, selectedCategory]);
 
 	return (
@@ -49,7 +51,9 @@ export default function SkillSection() {
 				})}
 			</div>
 
-			<SkillList skills={skillsToDisplay} />
+			<div className={style["skill-list"]}>
+				<SkillList skills={skillsToDisplay} />
+			</div>
 		</div>
 	);
 }

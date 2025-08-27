@@ -1,20 +1,17 @@
-export type SkillID =
-	| "C#"
-	| "HTML"
-	| "CSS"
-	| "JavascriptClient"
-	| "JavascriptServer"
-	| "Rust";
-export type SkillCategory = "Backend" | "Frontend" | "Tools";
-export type SkillExpertise =
-	| "Beginner"
-	| "Intermediate"
-	| "Advanced"
-	| "Expert";
+export type SkillID = string;
+
+export const SKILL_CATEGORIES = [
+	"Frontend",
+	"Backend",
+	"Tools",
+	"Conceptual",
+] as const;
+
+export type SkillCategory = (typeof SKILL_CATEGORIES)[number];
 
 export interface Skill {
-	id: SkillID;
+	id: string;
 	name: string;
-	category: SkillCategory;
-	expertise: SkillExpertise;
+	categories: SkillCategory[];
+	expertisePercentage: number;
 }
