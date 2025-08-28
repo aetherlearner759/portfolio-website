@@ -1,0 +1,88 @@
+.icon-sphere {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center;
+	animation: rotate 60s linear infinite;
+}
+
+.icon {
+	--radius: 15rem;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&::before {
+		content: " ";
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		box-shadow: 0px 0px 2rem 2rem var(--color-backgroundShadow);
+	}
+
+	& img {
+		object-fit: contain;
+		width: 3.5rem;
+		height: 3.5rem;
+		transform-origin: center;
+		animation:
+			rotate 60s linear infinite reverse,
+			throb 1.5s ease-in-out infinite alternate;
+	}
+
+	&:nth-child(1) {
+		transform: translate(var(--radius), 0px);
+	}
+	&:nth-child(2) {
+		transform: translate(
+			calc(cos(calc(360deg / 7)) * var(--radius)),
+			calc(sin(calc(360deg / 7)) * var(--radius))
+		);
+	}
+	&:nth-child(3) {
+		transform: translate(
+			calc(cos(calc(2 * 360deg / 7)) * var(--radius)),
+			calc(sin(calc(2 * 360deg / 7)) * var(--radius))
+		);
+	}
+	&:nth-child(4) {
+		transform: translate(
+			calc(cos(calc(3 * 360deg / 7)) * var(--radius)),
+			calc(sin(calc(3 * 360deg / 7)) * var(--radius))
+		);
+	}
+	&:nth-child(5) {
+		transform: translate(
+			calc(cos(calc(4 * 360deg / 7)) * var(--radius)),
+			calc(sin(calc(4 * 360deg / 7)) * var(--radius))
+		);
+	}
+	&:nth-child(6) {
+		transform: translate(
+			calc(cos(calc(5 * 360deg / 7)) * var(--radius)),
+			calc(sin(calc(5 * 360deg / 7)) * var(--radius))
+		);
+	}
+	&:nth-child(7) {
+		transform: translate(
+			calc(cos(calc(6 * 360deg / 7)) * var(--radius)),
+			calc(sin(calc(6 * 360deg / 7)) * var(--radius))
+		);
+	}
+}
+
+@keyframes rotate {
+	100% {
+		rotate: 1turn;
+	}
+}
+
+@keyframes throb {
+	100% {
+		scale: 1.07;
+	}
+}

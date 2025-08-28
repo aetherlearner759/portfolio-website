@@ -1,4 +1,6 @@
 import commonStyle from "../../common.module.css";
+import Fox from "../Fox/Fox";
+import IconSphere from "../IconSphere/IconSphere";
 import style from "./AboutSection.module.css";
 
 export default function AboutSection() {
@@ -20,7 +22,10 @@ export default function AboutSection() {
 					</p>
 				</div>
 
-				<div className={style.display}></div>
+				<div className={style.display}>
+					<IconSphere />
+					<Fox />
+				</div>
 			</div>
 		</div>
 	);

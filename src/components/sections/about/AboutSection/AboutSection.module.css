@@ -31,11 +31,20 @@
 	}
 
 	& .display {
+		position: relative;
 		flex-basis: 350px;
 		flex-shrink: 0;
 		align-self: stretch;
 		height: 350px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-		background-color: red;
+		& > *:last-child {
+			position: absolute;
+			z-index: 1;
+			width: 50%;
+			height: 50%;
+		}
 	}
 }
