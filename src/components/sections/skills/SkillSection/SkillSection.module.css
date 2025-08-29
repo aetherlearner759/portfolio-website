@@ -1,0 +1,68 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 20px;
+	height: 100%;
+}
+
+.skill-list {
+	flex-grow: 1;
+	width: clamp(0px, 100%, 800px);
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	overflow: auto;
+}
+
+.tabs-header {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(100px, 175px));
+	column-gap: 15px;
+	margin-bottom: 10px;
+}
+
+.tab-btn {
+	position: relative;
+	color: var(--color-text-a30);
+	font-size: 2rem;
+	border: none;
+	cursor: pointer;
+
+	background-color: transparent;
+	display: flex;
+	min-width: 100px;
+	margin: auto;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 2px;
+	padding: 8px;
+	transition: transform 0.4s;
+
+	&::after {
+		content: " ";
+		position: absolute;
+		background-color: var(--color-text);
+		bottom: 3px;
+		width: 35%;
+		height: 1px;
+		opacity: 0;
+		transition: opacity 0.4s;
+	}
+
+	&:hover {
+		color: var(--color-text-a70);
+		transform: scale(1.05);
+	}
+
+	&.active {
+		color: var(--color-text);
+		text-shadow: 0px 0px 5px var(--color-textShadow);
+		transform: translateY(7px);
+
+		&::after {
+			opacity: 1;
+		}
+	}
+}

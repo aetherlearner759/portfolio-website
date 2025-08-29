@@ -6,11 +6,16 @@ import path from "node:path";
 export default defineConfig(() => {
 	return {
 		plugins: [react()],
+		server: {
+			port: 4000,
+		},
 		resolve: {
 			alias: {
 				"@": path.resolve(__dirname, "./src"),
 				"@components": path.resolve(__dirname, "./src/components"),
 				"@assets": path.resolve(__dirname, "./src/assets"),
+				"@hooks": path.resolve(__dirname, "./src/hooks"),
+				"@data": path.resolve(__dirname, "./src/data"),
 			},
 		},
 	};

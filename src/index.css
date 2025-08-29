@@ -1,8 +1,126 @@
+@layer global;
+/* Normalize difference in default browser styling of HTML with normalize.css */
+@import "@/../node_modules/modern-normalize/modern-normalize.css" layer(global);
+
+@font-face {
+	font-family: "Space Grotesk";
+	src: url("@assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf")
+		format("truetype");
+	font-weight: 300, 400, 500, 600, 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@layer global {
+	:root {
+		font-size: 10px;
+		font-synthesis: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	*,
+	::before,
+	::after {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+}
+
 :root {
-	font-family: system-ui;
-	color-scheme: light dark;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	--font-standard: "Space Grotesk", Arial, sans-serif;
+	--font-emphasis: "Space Grotesk", "Helvetica", Arial, sans-serif;
+
+	--color-text: rgb(var(--string-textColor));
+	--color-background: rgb(var(--string-backgroundColor));
+	--color-backgroundContrast: rgb(var(--string-backgroundContrastColor));
+	--color-accent: rgb(var(--string-accentColor));
+	--color-white: light-dark(white, rgb(238, 238, 238));
+
+	--color-backgroundShadow: rgba(var(--string-backgroundContrastColor), 0.1);
+	--color-textShadow: rgba(var(--string-backgroundContrastColor), 0.15);
+
+	--color-text-a10: rgba(var(--string-textColor), 0.1);
+	--color-text-a20: rgba(var(--string-textColor), 0.2);
+	--color-text-a30: rgba(var(--string-textColor), 0.3);
+	--color-text-a40: rgba(var(--string-textColor), 0.4);
+	--color-text-a50: rgba(var(--string-textColor), 0.5);
+	--color-text-a60: rgba(var(--string-textColor), 0.6);
+	--color-text-a70: rgba(var(--string-textColor), 0.7);
+	--color-text-a80: rgba(var(--string-textColor), 0.8);
+	--color-text-a90: rgba(var(--string-textColor), 0.9);
+
+	--color-background-a10: rgba(var(--string-backgroundColor), 0.1);
+	--color-background-a20: rgba(var(--string-backgroundColor), 0.2);
+	--color-background-a30: rgba(var(--string-backgroundColor), 0.3);
+	--color-background-a40: rgba(var(--string-backgroundColor), 0.4);
+	--color-background-a50: rgba(var(--string-backgroundColor), 0.5);
+	--color-background-a60: rgba(var(--string-backgroundColor), 0.6);
+	--color-background-a70: rgba(var(--string-backgroundColor), 0.7);
+	--color-background-a80: rgba(var(--string-backgroundColor), 0.8);
+	--color-background-a90: rgba(var(--string-backgroundColor), 0.9);
+
+	--color-backgroundContrast-a10: rgba(
+		var(--string-backgroundContrastColor),
+		0.1
+	);
+	--color-backgroundContrast-a20: rgba(
+		var(--string-backgroundContrastColor),
+		0.2
+	);
+	--color-backgroundContrast-a30: rgba(
+		var(--string-backgroundContrastColor),
+		0.3
+	);
+	--color-backgroundContrast-a40: rgba(
+		var(--string-backgroundContrastColor),
+		0.4
+	);
+	--color-backgroundContrast-a50: rgba(
+		var(--string-backgroundContrastColor),
+		0.5
+	);
+	--color-backgroundContrast-a60: rgba(
+		var(--string-backgroundContrastColor),
+		0.6
+	);
+	--color-backgroundContrast-a70: rgba(
+		var(--string-backgroundContrastColor),
+		0.7
+	);
+	--color-backgroundContrast-a80: rgba(
+		var(--string-backgroundContrastColor),
+		0.8
+	);
+	--color-backgroundContrast-a90: rgba(
+		var(--string-backgroundContrastColor),
+		0.9
+	);
+
+	--color-accent-a10: rgba(var(--string-accentColor), 0.1);
+	--color-accent-a20: rgba(var(--string-accentColor), 0.2);
+	--color-accent-a30: rgba(var(--string-accentColor), 0.3);
+	--color-accent-a40: rgba(var(--string-accentColor), 0.4);
+	--color-accent-a50: rgba(var(--string-accentColor), 0.5);
+	--color-accent-a60: rgba(var(--string-accentColor), 0.6);
+	--color-accent-a70: rgba(var(--string-accentColor), 0.7);
+	--color-accent-a80: rgba(var(--string-accentColor), 0.8);
+	--color-accent-a90: rgba(var(--string-accentColor), 0.9);
+}
+
+:root {
+	color-scheme: light;
+	--string-textColor: 40, 40, 40;
+	--string-backgroundColor: 245, 245, 245;
+	--string-backgroundContrastColor: 25, 25, 25;
+	--string-accentColor: 80, 160, 240;
+}
+
+:root[data-theme="dark"] {
+	color-scheme: dark;
+	--string-textColor: 238, 238, 238;
+	--string-backgroundColor: 25, 25, 25;
+	--string-backgroundContrastColor: 245, 245, 245;
+	--string-accentColor: 59, 59, 220;
 }

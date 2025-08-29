@@ -1,0 +1,9 @@
+.root {
+	display: flex;
+	flex-direction: column;
+	padding: 0px min(120rem, 8%);
+
+	& > *:last-child {
+		flex-grow: 1;
+	}
+}

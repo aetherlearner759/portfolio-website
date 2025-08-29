@@ -1,0 +1,86 @@
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--scroll-padding);
+}
+
+.page {
+	background-color: var(--color-background);
+	width: 100vw;
+	height: auto;
+	font-family: var(--font-standard);
+	font-size: 1.6rem;
+}
+
+.background {
+	position: fixed;
+	width: 100vw;
+	height: 100vw;
+	pointer-events: none;
+}
+
+.top-header-content {
+	background-color: transparent;
+	padding-right: 20px;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+
+	& .dark-mode-slider {
+		margin-left: 18px;
+	}
+}
+
+.side-menu-content {
+	background-color: transparent;
+	padding-top: 20px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+
+	& .dark-mode-toggle {
+		margin-top: auto;
+		align-self: flex-start;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+.section {
+	width: 100vw;
+}
+
+.home-section {
+	height: 95vh;
+}
+
+.about-section {
+	min-height: 90vh;
+	margin-top: 25px;
+	padding-top: 50px;
+}
+
+.skills-section {
+	height: 95vh;
+	padding-top: 50px;
+}
+
+.projects-section {
+	min-height: 90vh;
+	padding-top: 55px;
+}
+
+.education-section {
+	padding-top: 50px;
+}
+
+.contact-section {
+	margin-top: 100px;
+	padding: 50px 20px 100px 20px;
+}
+
+.footer {
+	width: 100vw;
+	height: auto;
+}
