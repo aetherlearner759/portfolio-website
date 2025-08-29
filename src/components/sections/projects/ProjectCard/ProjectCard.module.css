@@ -24,7 +24,7 @@
 .thumbnail {
 	position: absolute;
 	border-radius: 5px;
-	padding: 5px;
+	padding: 10px 5px;
 	background: radial-gradient(
 		circle,
 		var(--color-accent-a50) 0%,

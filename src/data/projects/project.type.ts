@@ -1,12 +1,5 @@
-export type ProjectID =
-	| "Project1"
-	| "Project2"
-	| "Project3"
-	| "Project4"
-	| "Project5";
-
 export interface Project {
-	id: ProjectID;
+	id: string;
 	thumbnailImportPath: URL;
 	name: string;
 	tags: string[];

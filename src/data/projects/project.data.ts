@@ -3,82 +3,33 @@ import type { Project } from "./project.type";
 
 export const projects: Project[] = [
 	{
-		id: "Project1",
-		name: "My First Project",
-		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
+		id: "QuickCanvas",
+		name: "Quick Canvas",
+		tags: ["C#", ".NET", "WPF", "MVC", "MSTest"],
 		shortDescription:
-			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
-		thumbnailImportPath: getImageURL(
-			"Cat Fish 2 by admiller - CC BY 2.0 License.jpg",
-		),
-		githubLink: new URL("https://developer.mozilla.org"),
-		websiteLink: new URL("https://developer.mozilla.org"),
-		serverLink: new URL("https://developer.mozilla.org"),
-		demoVideoLink: new URL("https://developer.mozilla.org"),
-		learnMoreLink: new URL("https://developer.mozilla.org"),
+			"Windows desktop canvas application! With ease of use in mind, draw quick notes and save the result as png.",
+		thumbnailImportPath: getImageURL("Quick Canvas Thumbnail.png"),
+		githubLink: new URL("https://github.com/aetherlearner759/Quick-Canvas"),
 	},
 
 	{
-		id: "Project2",
-		name: "My Second Project",
-		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
+		id: "DailyVocab",
+		name: "Daily Vocab",
+		tags: ["Kotlin", "Android SDK", "SQL", "Room", "Gradle", "JUnit"],
 		shortDescription:
-			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
-		thumbnailImportPath: getImageURL(
-			"Cat Fish 2 by admiller - CC BY 2.0 License.jpg",
-		),
-		githubLink: new URL("https://developer.mozilla.org"),
-		websiteLink: new URL("https://developer.mozilla.org"),
-		serverLink: new URL("https://developer.mozilla.org"),
-		demoVideoLink: new URL("https://developer.mozilla.org"),
-		learnMoreLink: new URL("https://developer.mozilla.org"),
+			"An vocabulary android app. Learn new words everyday and expand your vocabulary",
+		thumbnailImportPath: getImageURL("Daily Vocab Thumbnail.png"),
+		githubLink: new URL("https://github.com/aetherlearner759/DailyVocab"),
 	},
 
 	{
-		id: "Project3",
-		name: "My Third Project",
-		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
-		shortDescription:
-			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
-		thumbnailImportPath: getImageURL(
-			"Cat Fish 2 by admiller - CC BY 2.0 License.jpg",
+		id: "PortfolioWebsite",
+		name: "Portfolio Website",
+		tags: ["React", "Javascript", "HTML", "CSS", "Vite"],
+		shortDescription: "My portfolio website you are currently seeing",
+		thumbnailImportPath: getImageURL("Portfolio Website Thumbnail.png"),
+		githubLink: new URL(
+			"https://github.com/aetherlearner759/portfolio-website",
 		),
-		githubLink: new URL("https://developer.mozilla.org"),
-		websiteLink: new URL("https://developer.mozilla.org"),
-		serverLink: new URL("https://developer.mozilla.org"),
-		demoVideoLink: new URL("https://developer.mozilla.org"),
-		learnMoreLink: new URL("https://developer.mozilla.org"),
-	},
-
-	{
-		id: "Project4",
-		name: "My Fourth Project",
-		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
-		shortDescription:
-			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
-		thumbnailImportPath: getImageURL(
-			"Cat Fish 2 by admiller - CC BY 2.0 License.jpg",
-		),
-		githubLink: new URL("https://developer.mozilla.org"),
-		websiteLink: new URL("https://developer.mozilla.org"),
-		serverLink: new URL("https://developer.mozilla.org"),
-		demoVideoLink: new URL("https://developer.mozilla.org"),
-		learnMoreLink: new URL("https://developer.mozilla.org"),
-	},
-
-	{
-		id: "Project5",
-		name: "My Fifth Project",
-		tags: ["Tag1", "Tag2", "Tag3", "Tag4", "Tag5"],
-		shortDescription:
-			"By knowledge from various disciplines and by gathering each infinity stone, I was able to finally create a todo app.",
-		thumbnailImportPath: getImageURL(
-			"Cat Fish 2 by admiller - CC BY 2.0 License.jpg",
-		),
-		githubLink: new URL("https://developer.mozilla.org"),
-		websiteLink: new URL("https://developer.mozilla.org"),
-		serverLink: new URL("https://developer.mozilla.org"),
-		demoVideoLink: new URL("https://developer.mozilla.org"),
-		learnMoreLink: new URL("https://developer.mozilla.org"),
 	},
 ];
